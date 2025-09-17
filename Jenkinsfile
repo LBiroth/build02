@@ -41,12 +41,12 @@ stage('Deploy to Nexus') {
 }
 post {
     success {
-      mail to: 'craig@creativeagilepartners.co.uk',
+      mail to: 'laura.biroth@regnology.net',
            subject: "✅ SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
            body: "Build succeeded.\nSee: ${env.BUILD_URL}"
     }
     failure {
-      mail to: 'craig@creativeagilepartners.co.uk',
+      mail to: 'laura.biroth@regnology.net',
            subject: "❌ FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
            body: "Build failed.\nConsole: ${env.BUILD_URL}console"
     }
